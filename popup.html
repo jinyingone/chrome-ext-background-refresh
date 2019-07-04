@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://developer.chrome.com/extensions/examples/tutorials/getstarted/popup.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Getting Started Extension's Popup</title>
+  <style type="text/css">
+    body {
+      margin: 10px;
+      white-space: nowrap;
+    }
+
+    h1 {
+      font-size: 15px;
+    }
+
+    #container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+</head>
+
+<body>
+  <h1>Background Color Changer</h1>
+  <div id="container">
+    <span>自动刷新间隔</span>
+    <select id="timeInterval" name="timeInterval">
+      <option selected="" disabled="" hidden="" value=""></option>
+      <option value="1">1分钟</option>
+      <option value="5">5分钟</option>
+      <option value="15" selected="selected">15分钟</option>
+      <option value="30">30分钟</option>
+    </select>
+  </div>
+
+  <div id="container">
+    <span>自动刷新地址</span>
+    <input type="text" id="auto_refresh_url" name="autoRefreshUrl" size="40" placeholder="http://baidu.com" />
+  </div>
+
+  <div>
+    <input id="startRefresh" type="submit" value="开始" />
+  </div>
+</body>
+<script src="./jquery.js"></script>
+<script src="./popup.js"></script>
+
+
+</html>
