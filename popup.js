@@ -6,11 +6,12 @@ $(function () {
   if (reqUrl != undefined && (reqUrl.startsWith("http://") || reqUrl.startsWith("https://"))) {
     $("#auto_refresh_url").val(localStorage.getItem("reqUrl"))
     goToURL();
+    sendMsgToContent();
   }
 })
 
 /**
- * 检查并跳转到指定的页面
+ * 检查并跳转到指定的页面`
  */
 function goToURL() {
   chrome.tabs.getAllInWindow(undefined, function (tabs) {
